@@ -81,14 +81,13 @@ addOrderButton.addEventListener("click", function(event){
 
 let orderForm = document.querySelector("#orderForm");
 let formMessage = document.querySelector("#formMessage");
+    let email = document.querySelector("#email");
+    let locationInput = document.querySelector("#location");
 
 orderForm.addEventListener("submit", function(event){
 
     event.preventDefault();
-     let email = document.querySelector("#email");
-    let location = document.querySelector("#location");
-
-    if(email.value == "" || location.value == ""){
+    if(email.value == "" || locationInput.value == ""){
 
         formMessage.textContent =
         "Please fill all fields smiley face !";
@@ -101,8 +100,29 @@ orderForm.addEventListener("submit", function(event){
         "Thank you for the orderr. Hope to see you oftenn.";
 
     email.value = "";
-    location.value = ""; 
+    locationInput.value = ""; 
+
+    localStorage.removeItem("email");
+    localStorage.removeItem("location");
 
     }
 
 });
+
+
+//5.
+
+if(localStorage.getItem("email") != null){
+    email.value = localStorage.getItem("email");
+}
+
+if(localStorage.getItem("location") != null){
+    locationInput.value = localStorage.getItem("location");
+}
+
+email.addEventListener("input", function(){
+    localStorage.setItem("email", email.value);
+});
+
+locationInput.addEventListener("input", function(){
+    localStorage.setItem("location", locationInput.value)});
