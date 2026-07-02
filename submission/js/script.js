@@ -1,3 +1,5 @@
+//1.
+
 let bannerImage = document.querySelector("#bannerImage");
 let bannerCaption = document.querySelector("#bannerCaption");
 
@@ -7,6 +9,7 @@ bannerImage.addEventListener("click", function(){
     bannerImage.classList.toggle("banner-clicked");
         });
 
+//2. 
 const products = [
     {
         name: "Fresh milk",
@@ -36,5 +39,40 @@ products.forEach(function(product){
     let li = document.createElement("li");
     li.textContent = product.name + " ; goes for ; " + product.price;
     productList.appendChild(li);
+
+});
+
+//3.
+let orderInput = document.querySelector("#orderInput");
+let addOrderButton = document.querySelector("#orderListForm button");
+let orderItems = document.querySelector("#orderItems");
+
+addOrderButton.addEventListener("click", function(event){
+    event.preventDefault();
+
+    if(orderInput.value != ""){
+
+  let li = document.createElement("li");
+        let button = document.createElement("button");
+
+        li.textContent = orderInput.value;
+
+        button.textContent = "౨ৎ  Delete ౨ৎ ";
+        button.addEventListener("click", function(){
+            li.remove();
+
+                });
+
+ li.appendChild(button);
+        orderItems.appendChild(li);
+        orderInput.value = "";
+
+    }
+
+    else{
+
+        alert("Nothing you wanna order? =( Nothing at all?");
+
+    }
 
 });
