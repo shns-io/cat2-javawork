@@ -76,3 +76,33 @@ addOrderButton.addEventListener("click", function(event){
     }
 
 });
+
+//4.
+
+let orderForm = document.querySelector("#orderForm");
+let formMessage = document.querySelector("#formMessage");
+
+orderForm.addEventListener("submit", function(event){
+
+    event.preventDefault();
+     let email = document.querySelector("#email");
+    let location = document.querySelector("#location");
+
+    if(email.value == "" || location.value == ""){
+
+        formMessage.textContent =
+        "Please fill all fields smiley face !";
+
+    }
+
+    else{
+
+        formMessage.textContent =
+        "Thank you for the orderr. Hope to see you oftenn.";
+
+    email.value = "";
+    location.value = ""; 
+
+    }
+
+});
