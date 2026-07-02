@@ -48,8 +48,11 @@
      <section id="Bann">
     <h2>Banner</h2>
 
-        <img src="images/banner.jpg" alt=" one of the cows in the farm">
+        <img id="bannerImage" src="images/banner.jpg" alt=" one of the cows in the farm">
 
+    <p id="bannerCaption" class="hidden">
+        Baraka Farm proudly provides fresh, natural milk from Kyaume, Makueni County.
+    </p>
  </section>
  <hr>
           <div class="container">
@@ -62,7 +65,7 @@
             </div>
             
  </section>
-            <hr>
+            
              <h1 class="text-center">Take a closer look!</h1>
                     
           
@@ -101,19 +104,20 @@
        <section id="Order">
           <h2><b><u>Dial A Delivery</u></b> </h2>
 <p>Fill out the form below to register for delivery plans and have pure, farm-fresh milk delivered straight to your home or shop.</p>
-            <form>
+            <form id="orderForm">
                 
                 <label>Email Address</label>
-                <input  type="email" name="username">
+                <input  type="email" id="email">
 
                
                 <label >Location</label>
-                <textarea name="opinion">
-                </textarea>
+                <textarea id="location"></textarea>
 
                 
                 <input type="submit" value="Place order">
             </form>
+
+            <p id="formMessage"></p> 
         
         </section>
 
@@ -134,7 +138,7 @@
           <p class="text-center">Headquarters: Makueni County- Kyaume </p>
           <p> © 2026 Baraka Farm Page | Created for Marketing development</p>
 </footer>
-
+<script src="js/script.js"></script>
 </body>
 
 </html>
