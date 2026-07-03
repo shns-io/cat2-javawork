@@ -1,0 +1,21 @@
+Task 1. Click-to-reveal banner
+- Clicking the banner image:
+     -toggles a hidden caption (Resets changes when clicked the second time)
+     - gives it a pink border 
+
+Task 2. Loop-rendered dynamic content
+    - Products are stored in a Js array
+    -products are displayed dynamically 
+
+Task 3. Dynamically add & remove elements
+    - Users can add products to a build your order list
+    - Each added item has a delete button that removes it 
+
+Task 4. Form handling with validation feedback
+    -Js validates that both the email and location fields are not empty
+    -asuccess or error message return respectfully
+
+Task 5. Persistent state with localStorage
+    -The email and location fields are automatically saved using localStorage as the user types
+    -The saved values remain even after refreshing the page
+    -The saved data is cleared after its submitted
